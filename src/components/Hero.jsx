@@ -63,7 +63,7 @@ export default function Hero() {
         </div>
  
         <div className="order-1 mx-auto flex aspect-square w-full max-w-[280px] items-center justify-center overflow-hidden border border-hairline bg-surface md:order-2">
-          <img src="/images/profile.jpg" alt="Bibian Nyaeru Robert" className="h-full w-full object-cover" />
+          <img src={`${import.meta.env.BASE_URL}images/profile.jpg`} alt="Bibian Nyaeru Robert" className="h-full w-full object-cover" />
         </div>
       </div>
     </section>
