@@ -5,7 +5,7 @@ export default function Publications() {
   return (
     <section id="publications" className="border-b border-hairline py-16">
       <div className="mx-auto max-w-wrap px-7">
-        <SectionHeader tag="06" title="Publications" />
+        <SectionHeader tag="06" title="Peer-Reviewed Publications" />
 
         <ul>
           {publications.map((pub, i) => (
