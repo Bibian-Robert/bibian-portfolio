@@ -4,6 +4,7 @@ dist
 *.local
 .Rproj.user
 Diagnostic-Study-KWTRP-main/
+README1.md
 
 # Unused image originals/alternates (not referenced in content.js)
 public/images/anaemia-clustering-school-aged-children-western-kenya.PNG
