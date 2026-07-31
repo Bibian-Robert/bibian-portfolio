@@ -4,15 +4,32 @@ import { projects } from '../data/content.js';
 function ProjectCard({ project }) {
   return (
     <div className="flex flex-col overflow-hidden border border-hairline bg-surface">
-      <div className="relative flex aspect-[16/10] items-center justify-center border-b border-hairline bg-[repeating-linear-gradient(45deg,#F9F8F5,#F9F8F5_10px,#EFE8DF_10px,#EFE8DF_20px)] p-4 text-center font-mono text-xs text-secondary">
+      <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden border-b border-hairline bg-[repeating-linear-gradient(45deg,#F9F8F5,#F9F8F5_10px,#EFE8DF_10px,#EFE8DF_20px)] text-center font-mono text-xs text-secondary">
         {project.image ? (
-          <img src={project.image} alt={project.title} className="h-full w-full object-cover" />
+          project.imageUrl || project.articleUrl ? (
+            <a href={project.imageUrl || project.articleUrl} className="block h-full w-full">
+              <img
+                src={`${import.meta.env.BASE_URL}${project.image}`}
+                alt={project.title}
+                className="h-full w-full object-cover"
+              />
+            </a>
+          ) : (
+            <img
+              src={`${import.meta.env.BASE_URL}${project.image}`}
+              alt={project.title}
+              className="h-full w-full object-cover"
+            />
+          )
         ) : (
-          <span>Add image: {`/images/${project.title.toLowerCase().replace(/\s+/g, '-')}.jpg`}</span>
+          <span className="p-4">Add image: {`images/${project.title.toLowerCase().replace(/\s+/g, '-')}.jpg`}</span>
         )}
       </div>
 
       <div className="flex flex-1 flex-col gap-2.5 px-5 py-5">
+        {project.theme && (
+          <span className="font-mono text-[11px] uppercase tracking-wide text-accentDark">{project.theme}</span>
+        )}
         <p className="font-display text-lg font-semibold">{project.title}</p>
         <p className="flex-1 text-sm text-secondary">{project.description}</p>
 
@@ -28,18 +45,28 @@ function ProjectCard({ project }) {
         </div>
 
         <div className="mt-1 flex gap-4">
-          <a
-            href={project.repoUrl}
-            className="border-b border-hairline pb-0.5 font-mono text-xs text-ink hover:border-accent hover:text-accent"
-          >
-            Repository →
-          </a>
+          {project.repoUrl && (
+            <a
+              href={project.repoUrl}
+              className="border-b border-hairline pb-0.5 font-mono text-xs text-ink hover:border-accentDark hover:text-accentDark"
+            >
+              Repository →
+            </a>
+          )}
           {project.liveUrl && project.liveUrl !== '#' && (
             <a
               href={project.liveUrl}
-              className="border-b border-hairline pb-0.5 font-mono text-xs text-ink hover:border-accent hover:text-accent"
+              className="border-b border-hairline pb-0.5 font-mono text-xs text-ink hover:border-accentDark hover:text-accentDark"
             >
-              Live demo →
+              {project.liveLabel || 'Live demo'} →
+            </a>
+          )}
+          {project.articleUrl && (
+            <a
+              href={project.articleUrl}
+              className="border-b border-hairline pb-0.5 font-mono text-xs text-ink hover:border-accentDark hover:text-accentDark"
+            >
+              View publication →
             </a>
           )}
         </div>
@@ -52,7 +79,7 @@ export default function Projects() {
   return (
     <section id="projects" className="border-b border-hairline py-16">
       <div className="mx-auto max-w-wrap px-7">
-        <SectionHeader tag="02" title="Projects" />
+        <SectionHeader tag="02" title="Selected Projects" />
 
         <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
@@ -60,10 +87,10 @@ export default function Projects() {
           ))}
         </div>
 
-        <p className="mt-5 font-mono text-[13px] italic text-accent">
+        {/* <p className="mt-5 font-mono text-[13px] italic text-accent">
           To add a project: open <code>src/data/content.js</code> and add a new object to the{' '}
           <code>projects</code> array — image, description, tags, and links all live there.
-        </p>
+        </p> */}
       </div>
     </section>
   );

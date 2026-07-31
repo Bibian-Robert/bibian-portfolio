@@ -2,3 +2,14 @@ node_modules
 dist
 .DS_Store
 *.local
+.Rproj.user
+Diagnostic-Study-KWTRP-main/
+
+# Unused image originals/alternates (not referenced in content.js)
+public/images/anaemia-clustering-school-aged-children-western-kenya.PNG
+public/images/anaemia-clustering-school-aged-children-western-kenya2.PNG
+public/images/best-poster-award.jpeg
+public/images/child-health-profiles-kenya.png
+public/images/flood-impact-healthcare-accessibility-analysis.tif
+public/images/malawi_workshop_3.jpg
+public/images/rising-star-1.jpeg

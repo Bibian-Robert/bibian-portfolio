@@ -5,9 +5,9 @@ export default function Hero() {
     <section id="top" className="border-b border-hairline py-24">
       <div className="mx-auto grid max-w-wrap grid-cols-1 items-center gap-14 px-7 text-center md:grid-cols-[1.5fr_1fr] md:text-left">
         <div className="order-2 md:order-1">
-          <p className="mb-5 font-mono text-[13px] uppercase tracking-wider text-accent">
+          {/* <p className="mb-5 font-mono text-[13px] uppercase tracking-wider text-accent">
             {hero.eyebrow} <span className="text-accentDark">{hero.coords}</span>
-          </p>
+          </p> */}
  
           <h1 className="mb-4 font-display text-4xl font-bold leading-[1.02] tracking-tight sm:text-5xl lg:text-6xl">
             {hero.name}
@@ -28,7 +28,7 @@ export default function Hero() {
           <div className="mb-6 flex flex-wrap justify-center gap-4 md:justify-start">
             <a
               href="#about"
-              className="inline-flex items-center gap-2 rounded-sm bg-ink px-5 py-3 font-mono text-[13px] text-paper transition hover:bg-accent hover:-translate-y-px"
+              className="inline-flex items-center gap-2 rounded-sm bg-ink px-5 py-3 font-mono text-[13px] text-paper transition hover:bg-accentDark hover:-translate-y-px"
             >
               About Me →
             </a>
@@ -43,21 +43,39 @@ export default function Hero() {
           <nav aria-label="Social links" className="flex flex-wrap justify-center gap-3.5 md:justify-start">
             <a
               href={social.linkedin}
-              className="rounded-sm border border-hairline px-3.5 py-1.5 font-mono text-xs text-ink transition hover:border-accent hover:text-accent"
+              className="rounded-sm border border-hairline px-3.5 py-1.5 font-mono text-xs text-ink transition hover:border-accentDark hover:text-accentDark"
             >
               LinkedIn
             </a>
             <a
               href={social.github}
-              className="rounded-sm border border-hairline px-3.5 py-1.5 font-mono text-xs text-ink transition hover:border-accent hover:text-accent"
+              className="rounded-sm border border-hairline px-3.5 py-1.5 font-mono text-xs text-ink transition hover:border-accentDark hover:text-accentDark"
             >
               GitHub
             </a>
             <a
               href={`mailto:${social.email}`}
-              className="rounded-sm border border-hairline px-3.5 py-1.5 font-mono text-xs text-ink transition hover:border-accent hover:text-accent"
+              className="rounded-sm border border-hairline px-3.5 py-1.5 font-mono text-xs text-ink transition hover:border-accentDark hover:text-accentDark"
             >
               Email
+            </a>
+            <a
+              href={social.scholar}
+              className="rounded-sm border border-hairline px-3.5 py-1.5 font-mono text-xs text-ink transition hover:border-accentDark hover:text-accentDark"
+            >
+              Google Scholar
+            </a>
+            <a
+              href={social.orcid}
+              className="rounded-sm border border-hairline px-3.5 py-1.5 font-mono text-xs text-ink transition hover:border-accentDark hover:text-accentDark"
+            >
+              ORCID
+            </a>
+            <a
+              href={social.researchgate}
+              className="rounded-sm border border-hairline px-3.5 py-1.5 font-mono text-xs text-ink transition hover:border-accentDark hover:text-accentDark"
+            >
+              ResearchGate
             </a>
           </nav>
         </div>

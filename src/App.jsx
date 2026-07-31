@@ -8,7 +8,7 @@ import Awards from './components/Awards.jsx';
 // import Experience from './components/Experience.jsx';
 import Publications from './components/Publications.jsx';
 import Community from './components/Community.jsx';
-// import Contact from './components/Contact.jsx';
+import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
  
 export default function App() {
@@ -23,8 +23,8 @@ export default function App() {
       {/* <Skills />
       <Experience /> */}
       <Publications />
-      <Community />
-      {/* <Contact /> */}
+      {/* <Community /> */}
+      <Contact />
       <Footer />
     </>
   );
