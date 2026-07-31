@@ -6,7 +6,7 @@ export default function TopBar() {
         <p className="mt-1 text-base">
           Geospatial Data Scientist | Geospatial World Rising Star 2026
         </p>
-        <p className="mt-1 text-base">MSc., The Pennsylvania State University</p>
+        <p className="mt-1 text-base">MSc., Spatial Data Science, The Pennsylvania State University</p>
       </div>
     </div>
   );
