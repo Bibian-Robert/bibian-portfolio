@@ -1,26 +1,26 @@
 import { useState } from 'react';
- 
+
 const links = [
   { href: '#top', label: 'Home' },
   { href: '#about', label: 'About' },
   { href: '#projects', label: 'Projects' },
   { href: '#awards', label: 'Awards' },
-  { href: '#skills', label: 'Skills' },
+  // { href: '#skills', label: 'Skills' },
   { href: '#publications', label: 'Publications' },
-  { href: '#community', label: 'Community' },
+  // { href: '#community', label: 'Community' },
   { href: '#contact', label: 'Contact' },
 ];
- 
+
 export default function Nav() {
   const [open, setOpen] = useState(false);
- 
+
   return (
     <header className="sticky top-0 z-50 border-b border-hairline bg-paper/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-wrap items-center justify-between px-7 py-3.5">
         {/* <a href="#top" className="font-mono text-[13px] font-medium tracking-wide text-ink">
           BNR // GEOSPATIAL
         </a> */}
- 
+
         {/* Desktop nav — always horizontal at md and above */}
         <ul className="hidden gap-6 font-mono text-xs uppercase tracking-wider md:flex">
           {links.map((link) => (
@@ -31,7 +31,7 @@ export default function Nav() {
             </li>
           ))}
         </ul>
- 
+
         {/* Mobile menu button — hidden at md and above */}
         <button
           className="rounded-sm border border-ink px-2.5 py-1 font-mono text-xs text-ink md:hidden"
@@ -42,7 +42,7 @@ export default function Nav() {
           MENU
         </button>
       </div>
- 
+
       {/* Mobile dropdown — only rendered below md, and only shown when open */}
       {open && (
         <ul

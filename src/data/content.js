@@ -16,7 +16,7 @@ export const social = {
 export const hero = {
   // eyebrow: 'Field notes — Nairobi, Kenya',
   // coords: '· 1°17′S 36°49′E',
-  name: "Bibian N. Robert",
+  name: "Bibian Robert",
   tagline: [
     'Geospatial data scientist delivering ',
     { emphasis: 'actionable, cross-sector insights' },
@@ -45,10 +45,10 @@ export const projects = [
     title: 'Malawi EmONC Facility Prioritization',
     theme: 'Government Advisory & Health Accessibility',
     description: "Provided regional GIS leadership as part of a multi-expert team for Malawi's three-phase Emergency Obstetric and Newborn Care (EmONC) prioritization process, applying AccessMod-based accessibility modelling using at least a 2-hour travel-time threshold for pregnant women. Collaborated with UNFPA, WHO, UNICEF, and the Ministry of Health to inform facility-prioritization decisions made by Malawi's district teams, strengthening emergency obstetric care access.",
-    tags: ['AccessMod', 'Accessibility Modelling','EmONC', 'Government Advisory'],
+    tags: ['AccessMod', 'Accessibility Modeling', 'EmONC', 'Government Advisory'],
     image: 'images/emonc_prioritization_malawi.jpg',
     imageCredit: 'UNFPA Malawi',
-    repoUrl: 'https://github.com/your-username/your-repo',
+    // repoUrl: 'https://github.com/your-username/your-repo',
     liveUrl: '#',
   },
   {
@@ -58,7 +58,7 @@ export const projects = [
     tags: ['R', 'Accessibility Modeling', 'Climate Resilience'],
     image: 'images/flood-impact-healthcare-accessibility-analysis.jpg',
     imageUrl: 'https://link.springer.com/article/10.1186/s12942-026-00461-x/figures/4',
-    repoUrl: 'https://github.com/your-username/your-repo',
+    // repoUrl: 'https://github.com/your-username/your-repo',
     liveUrl: '#',
     articleUrl: 'https://doi.org/10.1186/s12942-026-00461-x',
   },
@@ -68,7 +68,7 @@ export const projects = [
     description: 'Analyzed 2022 Kenya Demographic and Health Survey data across 1,673 survey clusters, comparing OLS, GWR, Multiscale GWR, and Similarity GWR models to test whether birth registration determinants vary spatially. Found Multiscale GWR fit best, showing some factors like bank account ownership and unemployment have localized effects while others act uniformly, pointing to the need for context-specific registration strategies rather than one-size-fits-all interventions.',
     tags: ['R', 'STATA', 'GWR', 'Regression Modelling', 'Spatial Statistics', 'Civil Registration'],
     image: 'images/spatial-determinants-of-birth-registration-coverage.jpg',
-    repoUrl: 'https://github.com/your-username/your-repo',
+    // repoUrl: 'https://github.com/your-username/your-repo',
     liveUrl: '#',
     articleUrl: 'https://doi.org/10.1016/j.sste.2025.100764',
   },
@@ -88,7 +88,7 @@ export const projects = [
     description: "Surveyed hemoglobin levels among 8,051 school-aged children across 82 schools in eight Western Kenya counties, then applied Moran's I, spatial scan statistics, and LISA clustering to test whether anaemia prevalence clusters geographically. Found an overall prevalence of 27.8%, with hotspot clusters reaching over 45% in some areas, informing recommendations to geographically target anaemia and malaria prevention interventions in school catchments most at risk.",
     tags: ['R', 'Spatial Epidemiology', 'Public Health', 'GIS'],
     image: 'images/anaemia-clustering-school-aged-children-western-kenya2.jpg',
-    repoUrl: 'https://github.com/your-username/your-repo',
+    // repoUrl: 'https://github.com/your-username/your-repo',
     liveUrl: '#',
     articleUrl: 'https://doi.org/10.1371/journal.pone.0282382',
   },
@@ -116,27 +116,64 @@ export const awards = [
 export const skillGroups = [
   {
     title: 'Spatial analysis & modeling',
-    items: ['AccessMod', 'ArcGIS Pro', 'QGIS', 'Google Earth Engine'],
+    items: [
+      { label: 'AccessMod', match: ['AccessMod'] },
+      { label: 'Accessibility Modeling', match: ['Accessibility Modeling'] },
+      { label: 'ArcGIS Pro', match: [] },
+      { label: 'QGIS', match: [] },
+      { label: 'Google Earth Engine', match: [] },
+    ],
   },
   {
     title: 'Data collection & management',
-    items: ['KoboToolbox', 'Survey123', 'DHIS2', 'PostgreSQL'],
+    items: [
+      { label: 'KoboToolbox', match: [] },
+      { label: 'Survey123', match: [] },
+      { label: 'DHIS2', match: ['DHIS2'] },
+      { label: 'PostgreSQL', match: [] },
+    ],
+  },
+  {
+    title: 'Data types & sources',
+    items: [
+      { label: 'Survey data (DHS, KDHS)', match: [] },
+      { label: 'Routine health system data (DHIS2)', match: ['DHIS2'] },
+      { label: 'Geospatial & environmental data', match: ['GIS'] },
+    ],
   },
   {
     title: 'Analysis & visualization',
-    items: ['R · Python · Stata', 'Web maps & dashboards', 'Tableau · ArcGIS Online'],
+    items: [
+      { label: 'R · Python · Stata', match: ['R', 'STATA'] },
+      { label: 'Geographically Weighted Regression (GWR)', match: ['GWR'] },
+      { label: 'Spatial statistics & epidemiology', match: ['Spatial Statistics', 'Spatial Epidemiology'] },
+      { label: 'Web maps & dashboards', match: [] },
+      { label: 'Tableau · ArcGIS Online', match: [] },
+    ],
   },
   {
     title: 'Training & capacity building',
-    items: ['AccessMod Regional Trainer', 'GIS training coordinator', 'GIS Hub facilitator, U. Nairobi'],
+    items: [
+      { label: 'AccessMod Regional Trainer', match: [] },
+      { label: 'GIS training coordinator', match: [] },
+      { label: 'GIS Hub facilitator, U. Nairobi', match: [] },
+    ],
   },
   {
     title: 'Technical writing',
-    items: ['Scientific & report writing', 'Literature review & appraisal', 'Canva · PowerPoint · Prezi'],
+    items: [
+      { label: 'Scientific & report writing', match: [] },
+      { label: 'Literature review & appraisal', match: ['Literature Synthesis'] },
+      { label: 'Canva · PowerPoint · Prezi', match: [] },
+    ],
   },
   {
     title: 'Workflow & infrastructure',
-    items: ['GIS infrastructure audits', 'Reproducible analytics', 'Automation using R'],
+    items: [
+      { label: 'GIS infrastructure audits', match: [] },
+      { label: 'Reproducible analytics', match: [] },
+      { label: 'Automation using R', match: ['R'] },
+    ],
   },
 ];
 

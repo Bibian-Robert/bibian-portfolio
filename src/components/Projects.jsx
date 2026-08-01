@@ -1,9 +1,19 @@
 import SectionHeader from './SectionHeader.jsx';
 import { projects } from '../data/content.js';
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, activeSkill }) {
+  const isMatch = activeSkill ? project.tags.some((t) => activeSkill.match.includes(t)) : true;
+
   return (
-    <div className="flex flex-col overflow-hidden border border-hairline bg-surface">
+    <div
+      className={`flex flex-col overflow-hidden border bg-surface transition ${
+        activeSkill
+          ? isMatch
+            ? 'border-accentDark shadow-lg'
+            : 'border-hairline opacity-35'
+          : 'border-hairline'
+      }`}
+    >
       <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden border-b border-hairline bg-[repeating-linear-gradient(45deg,#F9F8F5,#F9F8F5_10px,#EFE8DF_10px,#EFE8DF_20px)] text-center font-mono text-xs text-secondary">
         {project.image ? (
           project.imageUrl || project.articleUrl ? (
@@ -39,14 +49,21 @@ function ProjectCard({ project }) {
         <p className="flex-1 text-sm text-secondary">{project.description}</p>
 
         <div className="mb-1 mt-0.5 flex flex-wrap gap-1.5">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-sm border border-hairline bg-paper px-1.5 py-0.5 font-mono text-[10.5px] uppercase tracking-wide text-accentDark"
-            >
-              {tag}
-            </span>
-          ))}
+          {project.tags.map((tag) => {
+            const tagIsMatch = activeSkill?.match.includes(tag);
+            return (
+              <span
+                key={tag}
+                className={`rounded-sm border px-1.5 py-0.5 font-mono text-[10.5px] uppercase tracking-wide ${
+                  tagIsMatch
+                    ? 'border-accentDark bg-accentDark text-paper'
+                    : 'border-hairline bg-paper text-accentDark'
+                }`}
+              >
+                {tag}
+              </span>
+            );
+          })}
         </div>
 
         <div className="mt-1 flex gap-4">
@@ -80,15 +97,30 @@ function ProjectCard({ project }) {
   );
 }
 
-export default function Projects() {
+export default function Projects({ activeSkill, onClearSkill }) {
   return (
     <section id="projects" className="border-b border-hairline py-16">
       <div className="mx-auto max-w-wrap px-7">
-        <SectionHeader tag="02" title="Selected Projects" />
+        <SectionHeader title="Selected Projects" />
+
+        {activeSkill && (
+          <div className="mb-6 flex items-center gap-2.5 border border-accentDark bg-surface px-4 py-2.5 font-mono text-xs">
+            <span className="text-ink">
+              Showing projects using <strong className="text-accentDark">{activeSkill.label}</strong>
+            </span>
+            <button
+              type="button"
+              onClick={onClearSkill}
+              className="ml-auto rounded-sm border border-hairline px-2 py-0.5 text-ink transition hover:border-accentDark hover:text-accentDark"
+            >
+              Clear ✕
+            </button>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+            <ProjectCard key={project.title} project={project} activeSkill={activeSkill} />
           ))}
         </div>
 
