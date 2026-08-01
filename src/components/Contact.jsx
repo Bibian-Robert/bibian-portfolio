@@ -35,10 +35,7 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-accentDark py-16 text-paper">
       <div className="mx-auto max-w-wrap px-7">
-        <div className="mb-9 flex items-baseline gap-3.5">
-          <span className="whitespace-nowrap rounded-sm bg-ink px-2 py-0.5 font-mono text-xs tracking-wide text-paper">
-            08
-          </span>
+        <div className="mb-9">
           <h2 className="font-display text-2xl font-semibold text-paper sm:text-3xl">Contact</h2>
         </div>
 
