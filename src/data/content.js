@@ -7,7 +7,7 @@
 export const social = {
   linkedin: 'https://www.linkedin.com/in/bibian-robert-msc-91211b101/',
   github: 'https://github.com/your-username',
-  email: 'your.email@example.com',
+  email: 'bibianrobert@gmail.com',
   scholar: 'https://scholar.google.com/citations?user=l1pydXQAAAAJ&hl=en',
   orcid: 'https://orcid.org/0000-0002-9737-883X',
   researchgate: 'https://www.researchgate.net/profile/Bibian-Robert-2',
@@ -44,7 +44,7 @@ export const projects = [
   {
     title: 'Malawi EmONC Facility Prioritization',
     theme: 'Government Advisory & Health Accessibility',
-    description: "Provided regional GIS leadership as part of a multi-expert team for Malawi's three-phase Emergency Obstetric and Newborn Care (EmONC) prioritization process, applying AccessMod-based accessibility modeling against a 2-hour travel-time threshold for pregnant women. Collaborated with UNFPA, WHO, UNICEF, and the Ministry of Health to inform facility-prioritization decisions made by Malawi's public health districts, strengthening emergency obstetric care access.",
+    description: "Provided regional GIS leadership as part of a multi-expert team for Malawi's three-phase Emergency Obstetric and Newborn Care (EmONC) prioritization process, applying AccessMod-based accessibility modelling using at least a 2-hour travel-time threshold for pregnant women. Collaborated with UNFPA, WHO, UNICEF, and the Ministry of Health to inform facility-prioritization decisions made by Malawi's district teams, strengthening emergency obstetric care access.",
     tags: ['AccessMod', 'Accessibility Modelling','EmONC', 'Government Advisory'],
     image: 'images/emonc_prioritization_malawi.jpg',
     imageCredit: 'UNFPA Malawi',
