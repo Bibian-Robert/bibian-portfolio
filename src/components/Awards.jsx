@@ -12,11 +12,18 @@ export default function Awards() {
 
         {featured && (
           <div className="mb-9 grid grid-cols-1 overflow-hidden border border-hairline bg-surface md:grid-cols-[1.1fr_1fr]">
-            <img
-              src={`${import.meta.env.BASE_URL}${featured.image}`}
-              alt={featured.text}
-              className="h-64 w-full object-cover md:h-full"
-            />
+            <div className="relative h-64 md:h-full">
+              <img
+                src={`${import.meta.env.BASE_URL}${featured.image}`}
+                alt={featured.text}
+                className="h-full w-full object-cover"
+              />
+              {featured.imageCredit && (
+                <span className="absolute bottom-1.5 right-2 rounded-sm bg-ink/60 px-1.5 py-0.5 font-mono text-[9.5px] text-paper">
+                  Photo: {featured.imageCredit}
+                </span>
+              )}
+            </div>
             <div className="flex flex-col justify-center gap-2.5 px-7 py-7">
               <span className="font-mono text-xs uppercase tracking-wide text-accentDark">{featured.year}</span>
               <p className="font-display text-xl font-semibold leading-snug">{featured.text}</p>
