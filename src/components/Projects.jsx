@@ -24,6 +24,11 @@ function ProjectCard({ project }) {
         ) : (
           <span className="p-4">Add image: {`images/${project.title.toLowerCase().replace(/\s+/g, '-')}.jpg`}</span>
         )}
+        {project.image && project.imageCredit && (
+          <span className="absolute bottom-1.5 right-2 rounded-sm bg-ink/60 px-1.5 py-0.5 font-mono text-[9.5px] text-paper">
+            Photo: {project.imageCredit}
+          </span>
+        )}
       </div>
 
       <div className="flex flex-1 flex-col gap-2.5 px-5 py-5">
