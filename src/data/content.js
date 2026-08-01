@@ -19,17 +19,17 @@ export const hero = {
   name: "Bibian N. Robert",
   tagline: [
     'Geospatial data scientist delivering ',
-    { emphasis: 'actionable, cross-sector spatial evidence' },
-    ' and strengthening ',
-    { emphasis: 'national capacity to apply it' },
+    { emphasis: 'actionable, cross-sector insights' },
+    ' from survey, routine, and geospatial data, while strengthening ',
+    { emphasis: 'national capacity' },
     ' across Eastern and Southern Africa.',
   ],
 };
 
 export const about = {
   paragraphs: [
-    "I have 5+ years of experience spanning land and engineering surveying, GIS research, advanced geospatial analytics, data analysis and visualization, and regional capacity building and advisory across Eastern and Southern Africa. I hold a Master's degree in Spatial Data Science from The Pennsylvania State University, a Bachelor's degree in Geospatial Engineering from the University of Nairobi, and a Geohealth Certificate from the University of Twente. My background includes serving as a GIS Researcher at the KEMRI-Wellcome Trust Research Programme, where I authored six first-author peer-reviewed papers translating spatial evidence into policy-relevant recommendations and developed reproducible workflows.",
-    "I was awarded the Geospatial World Rising Star recognition in early 2026 (Top 50 globally), and since then I have supported the United Nations Population Fund's Eastern and Southern Africa Regional Office (UNFPA ESARO) as an independent geospatial consultant. This includes leading Malawi's national-level facility prioritization for Emergency Obstetric and Newborn Care as part of a regional team of GIS experts, and designing training curricula and facilitator guides that help country and regional teams sustain this work. I continue to advance the use of geospatial technology in collaborative, multidisciplinary settings to address development challenges.",
+    "I have 5+ years of experience spanning GIS research, advanced geospatial analytics, data analysis and visualization, scientific writing, and land and engineering surveying, alongside regional capacity building. I hold a Master's degree in Spatial Data Science from The Pennsylvania State University, a Bachelor's degree in Geospatial Engineering from the University of Nairobi, and a Geohealth Certificate from the University of Twente. My background includes serving as a GIS Researcher at the KEMRI-Wellcome Trust Research Programme, where I authored six first-author peer-reviewed papers translating spatial evidence into policy-relevant recommendations and developed reproducible analytical workflows.",
+    "I was recognized as a Geospatial World Rising Star in 2026 (Top 50 globally) and currently support the United Nations Population Fund (UNFPA ESARO) as an independent geospatial consultant. This includes leading Malawi's national-level facility prioritization for Emergency Obstetric and Newborn Care as part of a regional team of GIS experts, and designing training curricula and facilitator guides that enable country and regional teams to sustain this work. I am committed to advancing the use of geospatial and quantitative methods in collaborative, multidisciplinary settings to address development challenges.",
   ],
   facts: [
     { label: 'Based in', value: 'Nairobi, Kenya' },

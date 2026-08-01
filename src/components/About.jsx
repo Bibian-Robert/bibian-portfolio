@@ -10,7 +10,7 @@ export default function About() {
         <div className="grid grid-cols-1 items-start gap-12 md:grid-cols-[1.4fr_1fr]">
           <div>
             {about.paragraphs.map((p, i) => (
-              <p key={i} className="mb-4 max-w-[60ch] last:mb-0">
+              <p key={i} className="mb-4 max-w-[60ch] text-justify last:mb-0">
                 {p}
               </p>
             ))}
