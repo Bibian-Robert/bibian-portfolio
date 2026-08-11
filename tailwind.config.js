@@ -18,7 +18,7 @@ export default {
         mono: ['"IBM Plex Mono"', 'monospace'],
       },
       maxWidth: {
-        wrap: '1080px',
+        wrap: '1280px',
       },
     },
   },
