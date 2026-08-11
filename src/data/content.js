@@ -104,6 +104,26 @@ export const projects = [
     liveLabel: 'View Profiles',
     // articleUrl: 'https://inform.kemri-wellcome.org/wp-content/uploads/2021/06/Baringo_U5M_-Its-_Determinants_County_Profile.pdf',
   },
+  {
+    title: 'Web Map Application - Civil Registration Office Locator, Kenya',
+    theme: 'Web GIS Application Development',
+    description: "Built an interactive Civil Registration Office (CRO) locator web application for Kenya as a graduate term project, mapping office locations with clickable details and route-finding to the nearest office. It also includes a custom basemap for Kenya in addition to OpenStreetMap, ESRI World Imagery, and others. Designed to close the access gap that limits birth registration coverage, complementing my published research on the determinants of birth registration in Kenya.",
+    tags: ['Web GIS', 'Leaflet', 'Custom Basemap', 'GeoServer', 'Amazon Web Services', 'Interactive Mapping', 'Civil Registration'],
+    image: 'images/crvs_webapp.jpg',
+    imageUrl: 'https://geog585-bnr2024.s3.us-east-1.amazonaws.com/Geog585TermProject/BibianRobert_CROsWebApp.html',
+    liveUrl: 'https://geog585-bnr2024.s3.us-east-1.amazonaws.com/Geog585TermProject/BibianRobert_CROsWebApp.html',
+    liveLabel: 'View Web App',
+  },
+  {
+    title: 'Air Pollution Disease Burden Dashboard',
+    theme: 'Global Health & Data Visualization',
+    description: "Built an interactive Tableau dashboard visualizing the global burden of disease attributable to ambient and household air pollution, enabling exploration of health impacts across countries and regions.",
+    tags: ['Tableau', 'Data Visualization', 'Air Pollution', 'Global Health'],
+    image: 'images/airpollution_tableau.jpg',
+    imageUrl: 'https://public.tableau.com/app/profile/bibianrobert/viz/Airpollutiondiseaseburden/AirPollutiondiseaseburden',
+    liveUrl: 'https://public.tableau.com/app/profile/bibianrobert/viz/Airpollutiondiseaseburden/AirPollutiondiseaseburden',
+    liveLabel: 'View Dashboard',
+  },
 ];
 
 export const awards = [

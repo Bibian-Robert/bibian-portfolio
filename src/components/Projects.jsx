@@ -21,7 +21,7 @@ function ProjectCard({ project, activeSkill }) {
               <img
                 src={`${import.meta.env.BASE_URL}${project.image}`}
                 alt={project.title}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-top"
               />
             </a>
           ) : (
