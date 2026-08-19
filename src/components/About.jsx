@@ -20,7 +20,15 @@ export default function About() {
             {about.facts.map((fact, i) => (
               <div key={fact.label} className={i > 0 ? 'mt-3.5' : ''}>
                 <dt className="text-[11px] uppercase tracking-wide text-accentDark">{fact.label}</dt>
-                <dd className="mt-0.5 text-ink">{fact.value}</dd>
+                {Array.isArray(fact.value) ? (
+                  fact.value.map((line) => (
+                    <dd key={line} className="mt-0.5 text-ink">
+                      {line}
+                    </dd>
+                  ))
+                ) : (
+                  <dd className="mt-0.5 text-ink">{fact.value}</dd>
+                )}
               </div>
             ))}
           </dl>

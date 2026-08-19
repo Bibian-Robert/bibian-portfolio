@@ -34,7 +34,13 @@ export const about = {
   facts: [
     { label: 'Based in', value: 'Nairobi, Kenya' },
     { label: 'Currently', value: 'Consultant / Regional GIS Expert supporting UNFPA ESARO' },
-    { label: 'Education', value: 'MSc Spatial Data Science, Penn State' },
+    {
+      label: 'Education',
+      value: [
+        'MSc Spatial Data Science, The Pennsylvania State University, USA',
+        'BSc Geospatial Engineering, The University of Nairobi, Kenya',
+      ],
+    },
     { label: 'Languages', value: 'English, Kiswahili, German (B1), French (B1)' },
     { label: 'Publications', value: '6 first-authored, peer-reviewed' },
   ],
@@ -64,9 +70,9 @@ export const projects = [
   },
   {
     title: 'Spatial Determinants of Birth Registration Coverage',
-    theme: 'Civil Registration & Vital Statistics',
+    theme: 'Spatial Regression & Civil Registration',
     description: 'Analyzed 2022 Kenya Demographic and Health Survey data across 1,673 survey clusters, comparing OLS, GWR, Multiscale GWR, and Similarity GWR models to test whether birth registration determinants vary spatially. Found Multiscale GWR fit best, showing some factors like bank account ownership and unemployment have localized effects while others act uniformly, pointing to the need for context-specific registration strategies rather than one-size-fits-all interventions.',
-    tags: ['R', 'STATA', 'GWR', 'Regression Modelling', 'Spatial Statistics', 'Civil Registration', 'DHS Survey'],
+    tags: ['R', 'STATA', 'GWR', 'Regression Modelling', 'Spatial Statistics', 'Civil Registration', 'DHS Survey', 'Demography'],
     image: 'images/spatial-determinants-of-birth-registration-coverage.jpg',
     // repoUrl: 'https://github.com/your-username/your-repo',
     liveUrl: '#',
@@ -74,7 +80,7 @@ export const projects = [
   },
   {
     title: 'Rapid Diagnostic Testing Gap Analysis, Kenya',
-    theme: 'Health Systems & Data Quality',
+    theme: 'Data Quality & Health Systems',
     description: 'Linked DHIS2 facility-level data for 19 rapid diagnostic tests (2018-2020) across 13,373 geocoded health facilities in Kenya, then modeled supply against estimated demand to quantify unmet testing needs by county. Found reporting completeness below 40% nationally and stark geographic gaps, such as high unmet malaria-testing needs in Turkana and the western/coastal regions, pointing to the need for targeted interventions to close testing gaps and strengthen routine data reporting.',
     tags: ['R', 'DHIS2', 'Health Systems', 'Data Quality', 'Data Cleaning'],
     image: 'images/rapid-diagnostic-testing-gap-analysis-kenya.jpg',
@@ -84,9 +90,9 @@ export const projects = [
   },
   {
     title: 'Anaemia Clustering in School-Aged Children, Western Kenya',
-    theme: 'Public Health & Spatial Epidemiology',
+    theme: 'Nutrition & Spatial Epidemiology',
     description: "Surveyed hemoglobin levels among 8,051 school-aged children across 82 schools in eight Western Kenya counties, then applied Moran's I, spatial scan statistics, and LISA clustering to test whether anaemia prevalence clusters geographically. Found an overall prevalence of 27.8%, with hotspot clusters reaching over 45% in some areas, informing recommendations to geographically target anaemia and malaria prevention interventions in school catchments most at risk.",
-    tags: ['R', 'Spatial Epidemiology', 'Public Health', 'GIS', 'School Survey', 'Risk Mapping', 'Stata'],
+    tags: ['R', 'Spatial Epidemiology', 'Public Health', 'GIS', 'School Survey', 'Risk Mapping', 'Stata', 'Nutrition'],
     image: 'images/anaemia-clustering-school-aged-children-western-kenya2.jpg',
     // repoUrl: 'https://github.com/your-username/your-repo',
     liveUrl: '#',
@@ -94,7 +100,7 @@ export const projects = [
   },
   {
     title: 'Sub-National Child Health Profiles, Kenya',
-    theme: 'Child Health & Policy Advisory',
+    theme: 'County Profiles - Policy Advisory',
     description: "Synthesized evidence across peer-reviewed literature and routine data to develop sub-national child health profiles for each of Kenya's 47 counties, highlighting temporal trends and determinants of under-five mortality to inform county-level health policy and planning. Profiles are available for all 47 counties and hosted on the KEMRI-Wellcome Trust website. View the live demo below.",
     tags: ['Literature Synthesis', 'Child Health', 'Policy Brief', 'Python', 'R', 'ArcMap'],
     image: 'images/child-health-profiles-kenya.jpg',
@@ -108,7 +114,7 @@ export const projects = [
     title: 'Web Map Application - Civil Registration Office Locator, Kenya',
     theme: 'Web GIS Application Development',
     description: "Built an interactive Civil Registration Office (CRO) locator web application for Kenya as a graduate term project, mapping office locations with clickable details and route-finding to the nearest office. It also includes a custom basemap for Kenya in addition to OpenStreetMap, ESRI World Imagery, and others. Designed to close the access gap that limits birth registration coverage, complementing my published research on the determinants of birth registration in Kenya.",
-    tags: ['Web GIS', 'Leaflet', 'Custom Basemap', 'GeoServer', 'Amazon Web Services', 'Interactive Mapping', 'Civil Registration'],
+    tags: ['Web GIS', 'JavaScript', 'Leaflet', 'Custom Basemap', 'GeoServer', 'Amazon Web Services', 'Interactive Mapping', 'Civil Registration'],
     image: 'images/crvs_webapp.jpg',
     imageUrl: 'https://geog585-bnr2024.s3.us-east-1.amazonaws.com/Geog585TermProject/BibianRobert_CROsWebApp.html',
     liveUrl: 'https://geog585-bnr2024.s3.us-east-1.amazonaws.com/Geog585TermProject/BibianRobert_CROsWebApp.html',
@@ -116,7 +122,7 @@ export const projects = [
   },
   {
     title: 'Air Pollution Disease Burden Dashboard',
-    theme: 'Global Health & Data Visualization',
+    theme: 'Tableau Dashboard',
     description: "Built an interactive Tableau dashboard visualizing the global burden of disease attributable to ambient and household air pollution, enabling exploration of health impacts across countries and regions.",
     tags: ['Tableau', 'Data Visualization', 'Air Pollution', 'Global Health'],
     image: 'images/airpollution_tableau.jpg',
@@ -128,9 +134,13 @@ export const projects = [
 
 export const awards = [
   { year: '2026', text: 'Geospatial World Rising Star 2026 (Top 50 Globally) by Geospatial World Forum, Amsterdam, The Netherlands', tagline: "Recognized among the geospatial industry's rising young leaders shaping its next chapter of innovation.", image: 'images/geospatial-world-rising-star-2026.jpg', imageCredit: 'Geospatial World Forum', url: 'https://geospatialworld.net/rising-stars/2026/' },
-  { year: '2024', text: 'Best Poster Presentation, GEOMED International Conference, Hasselt University, Belgium' },
-  { year: '2021', text: 'Best Final Year Project, Dept. of Geospatial & Space Technology — Institution of Engineers of Kenya' },
-  { year: '2020', text: 'First Runner-Up (Female), Hon. Dr. Musimba School of Engineering Prize Fund, University of Nairobi' },
+  {
+    year: '2024',
+    text: 'Best Poster Presentation, issued at the 24th GEOMED International Conference, Hasselt University, Belgium',
+    images: ['images/best-poster-award.jpg', 'images/best-poster-cert2.jpg'],
+  },
+  { year: '2021', text: 'Best Final Year Project, Class of 2018/2019, School of Engineering, Department of Geospatial & Space Technology, The University of Nairobi, issued by the Institute of Engineers of Kenya' },
+  { year: '2020', text: "First Runner-Up (Female), Under Social Pillar of Kenya's Vision 2030. Hon. Dr. Musimba School of Engineering Prize Fund, University of Nairobi" },
 ];
 
 export const skillGroups = [

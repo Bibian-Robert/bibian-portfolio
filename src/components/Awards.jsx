@@ -46,10 +46,22 @@ export default function Awards() {
           {rest.map((award, i) => (
             <li
               key={i}
-              className="flex gap-3.5 border-b border-dotted border-hairline pb-3.5 text-[14.5px] last:border-none last:pb-0"
+              className="flex flex-wrap items-center gap-3.5 border-b border-dotted border-hairline pb-3.5 text-[14.5px] last:border-none last:pb-0"
             >
               <span className="flex-shrink-0 font-mono text-xs text-secondary">{award.year}</span>
-              <span>{award.text}</span>
+              <span className="flex-1">{award.text}</span>
+              {award.images && (
+                <span className="flex gap-2">
+                  {award.images.map((img) => (
+                    <img
+                      key={img}
+                      src={`${import.meta.env.BASE_URL}${img}`}
+                      alt={award.text}
+                      className="h-14 w-20 flex-shrink-0 rounded-sm border border-hairline object-cover"
+                    />
+                  ))}
+                </span>
+              )}
             </li>
           ))}
         </ul>

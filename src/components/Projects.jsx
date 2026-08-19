@@ -43,7 +43,7 @@ function ProjectCard({ project, activeSkill }) {
 
       <div className="flex flex-1 flex-col gap-2.5 px-5 py-5">
         {project.theme && (
-          <span className="font-mono text-[11px] uppercase tracking-wide text-accentDark">{project.theme}</span>
+          <span className="font-mono text-xs font-semibold uppercase tracking-wide text-accent">{project.theme}</span>
         )}
         <p className="font-display text-lg font-semibold">{project.title}</p>
         <p className="flex-1 text-sm text-secondary">{project.description}</p>
@@ -56,8 +56,8 @@ function ProjectCard({ project, activeSkill }) {
                 key={tag}
                 className={`rounded-sm border px-1.5 py-0.5 font-mono text-[10.5px] uppercase tracking-wide ${
                   tagIsMatch
-                    ? 'border-accentDark bg-accentDark text-paper'
-                    : 'border-hairline bg-paper text-accentDark'
+                    ? 'border-accent bg-accent text-paper'
+                    : 'border-accent bg-paper text-accent'
                 }`}
               >
                 {tag}
