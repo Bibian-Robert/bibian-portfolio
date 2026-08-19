@@ -3,12 +3,13 @@ import { awards } from '../data/content.js';
 
 export default function Awards() {
   const featured = awards.find((a) => a.image);
-  const rest = awards.filter((a) => a !== featured);
+  const cardAwards = awards.filter((a) => a.images);
+  const rest = awards.filter((a) => a !== featured && !a.images);
 
   return (
     <section id="awards" className="border-b border-hairline py-16">
       <div className="mx-auto max-w-wrap px-7">
-        <SectionHeader tag="03" title="Awards & Recognition" />
+        <SectionHeader title="Awards & Recognition" />
 
         {featured && (
           <div className="mb-9 grid grid-cols-1 overflow-hidden border border-hairline bg-surface md:grid-cols-[1.1fr_1fr]">
@@ -42,26 +43,43 @@ export default function Awards() {
           </div>
         )}
 
+        {cardAwards.length > 0 && (
+          <div className="mb-9 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
+            {cardAwards.map((award, i) => (
+              <div key={i} className="flex flex-col overflow-hidden border border-hairline bg-surface">
+                <div className="grid grid-cols-2 gap-px bg-hairline">
+                  {award.images.map((img, imgIndex) => (
+                    <div key={img} className="relative">
+                      <img
+                        src={`${import.meta.env.BASE_URL}${img}`}
+                        alt={award.text}
+                        className="aspect-square w-full object-cover"
+                      />
+                      {award.imageCredits?.[imgIndex] && (
+                        <span className="absolute bottom-1 right-1 rounded-sm bg-ink/60 px-1 py-0.5 font-mono text-[8.5px] text-paper">
+                          Photo: {award.imageCredits[imgIndex]}
+                        </span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+                <div className="flex flex-1 flex-col gap-2 px-5 py-5">
+                  <span className="font-mono text-xs uppercase tracking-wide text-accentDark">{award.year}</span>
+                  <p className="text-[14.5px] leading-relaxed">{award.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
         <ul className="grid gap-3.5">
           {rest.map((award, i) => (
             <li
               key={i}
-              className="flex flex-wrap items-center gap-3.5 border-b border-dotted border-hairline pb-3.5 text-[14.5px] last:border-none last:pb-0"
+              className="flex gap-3.5 border-b border-dotted border-hairline pb-3.5 text-[14.5px] last:border-none last:pb-0"
             >
               <span className="flex-shrink-0 font-mono text-xs text-secondary">{award.year}</span>
-              <span className="flex-1">{award.text}</span>
-              {award.images && (
-                <span className="flex gap-2">
-                  {award.images.map((img) => (
-                    <img
-                      key={img}
-                      src={`${import.meta.env.BASE_URL}${img}`}
-                      alt={award.text}
-                      className="h-14 w-20 flex-shrink-0 rounded-sm border border-hairline object-cover"
-                    />
-                  ))}
-                </span>
-              )}
+              <span>{award.text}</span>
             </li>
           ))}
         </ul>

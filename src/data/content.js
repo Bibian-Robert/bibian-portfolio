@@ -138,6 +138,7 @@ export const awards = [
     year: '2024',
     text: 'Best Poster Presentation, issued at the 24th GEOMED International Conference, Hasselt University, Belgium',
     images: ['images/best-poster-award.jpg', 'images/best-poster-cert2.jpg'],
+    imageCredits: ['GEOMED 2024', 'BNR'],
   },
   { year: '2021', text: 'Best Final Year Project, Class of 2018/2019, School of Engineering, Department of Geospatial & Space Technology, The University of Nairobi, issued by the Institute of Engineers of Kenya' },
   { year: '2020', text: "First Runner-Up (Female), Under Social Pillar of Kenya's Vision 2030. Hon. Dr. Musimba School of Engineering Prize Fund, University of Nairobi" },
