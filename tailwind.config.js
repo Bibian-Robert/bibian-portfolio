@@ -8,7 +8,7 @@ export default {
         secondary: '#6E6E6E',
         paper: '#F9F8F5',
         surface: '#EFE8DF',
-        accent: '#663001',
+        accent: '#97737A',
         accentDark: '#7A6656',
         hairline: 'rgba(46,46,46,0.12)',
       },
