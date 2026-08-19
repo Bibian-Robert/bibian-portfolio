@@ -3,8 +3,7 @@ import { awards } from '../data/content.js';
 
 export default function Awards() {
   const featured = awards.find((a) => a.image);
-  const cardAwards = awards.filter((a) => a.images);
-  const rest = awards.filter((a) => a !== featured && !a.images);
+  const rest = awards.filter((a) => a !== featured);
 
   return (
     <section id="awards" className="border-b border-hairline py-16">
@@ -26,7 +25,7 @@ export default function Awards() {
               )}
             </div>
             <div className="flex flex-col justify-center gap-2.5 px-7 py-7">
-              <span className="font-mono text-xs uppercase tracking-wide text-accentDark">{featured.year}</span>
+              <span className="font-mono text-xs uppercase tracking-wide text-accent">{featured.year}</span>
               <p className="font-display text-xl font-semibold leading-snug">{featured.text}</p>
               {featured.tagline && (
                 <p className="text-[14.5px] italic text-secondary">{featured.tagline}</p>
@@ -34,7 +33,7 @@ export default function Awards() {
               {featured.url && (
                 <a
                   href={featured.url}
-                  className="mt-1 inline-block w-fit border-b border-hairline pb-0.5 font-mono text-xs text-accentDark hover:border-ink hover:text-ink"
+                  className="mt-1 inline-block w-fit border-b border-hairline pb-0.5 font-mono text-xs text-accent hover:border-ink hover:text-ink"
                 >
                   Read more →
                 </a>
@@ -43,10 +42,10 @@ export default function Awards() {
           </div>
         )}
 
-        {cardAwards.length > 0 && (
-          <div className="mb-9 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
-            {cardAwards.map((award, i) => (
-              <div key={i} className="flex flex-col overflow-hidden border border-hairline bg-surface">
+        <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
+          {rest.map((award, i) => (
+            <div key={i} className="flex flex-col overflow-hidden border border-hairline bg-surface">
+              {award.images && (
                 <div className="grid grid-cols-2 gap-px bg-hairline">
                   {award.images.map((img, imgIndex) => (
                     <div key={img} className="relative">
@@ -63,26 +62,14 @@ export default function Awards() {
                     </div>
                   ))}
                 </div>
-                <div className="flex flex-1 flex-col gap-2 px-5 py-5">
-                  <span className="font-mono text-xs uppercase tracking-wide text-accentDark">{award.year}</span>
-                  <p className="text-[14.5px] leading-relaxed">{award.text}</p>
-                </div>
+              )}
+              <div className="flex flex-1 flex-col gap-2 px-5 py-5">
+                <span className="font-mono text-xs uppercase tracking-wide text-accent">{award.year}</span>
+                <p className="text-[14.5px] leading-relaxed">{award.text}</p>
               </div>
-            ))}
-          </div>
-        )}
-
-        <ul className="grid gap-3.5">
-          {rest.map((award, i) => (
-            <li
-              key={i}
-              className="flex gap-3.5 border-b border-dotted border-hairline pb-3.5 text-[14.5px] last:border-none last:pb-0"
-            >
-              <span className="flex-shrink-0 font-mono text-xs text-secondary">{award.year}</span>
-              <span>{award.text}</span>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

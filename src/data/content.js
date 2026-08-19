@@ -42,7 +42,10 @@ export const about = {
       ],
     },
     { label: 'Languages', value: 'English, Kiswahili, German (B1), French (B1)' },
-    { label: 'Publications', value: '6 first-authored, peer-reviewed' },
+    {
+      label: 'Publications',
+      value: ['6 first-authored, peer-reviewed', 'Co-author, scientific mentor, or technical support on 10+ more'],
+    },
   ],
 };
 

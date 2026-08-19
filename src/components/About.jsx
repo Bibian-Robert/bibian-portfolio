@@ -19,7 +19,7 @@ export default function About() {
           <dl className="border border-hairline bg-surface px-6 py-5 font-mono text-[13px]">
             {about.facts.map((fact, i) => (
               <div key={fact.label} className={i > 0 ? 'mt-3.5' : ''}>
-                <dt className="text-[11px] uppercase tracking-wide text-accentDark">{fact.label}</dt>
+                <dt className="text-[11px] uppercase tracking-wide text-accent">{fact.label}</dt>
                 {Array.isArray(fact.value) ? (
                   fact.value.map((line) => (
                     <dd key={line} className="mt-0.5 text-ink">

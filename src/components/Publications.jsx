@@ -39,7 +39,7 @@ export default function Publications() {
                     {' '}
                     <a
                       href={pub.url}
-                      className="font-mono text-[12.5px] text-accentDark hover:text-ink hover:underline"
+                      className="font-mono text-[12.5px] text-accent hover:text-ink hover:underline"
                     >
                       View article →
                     </a>
